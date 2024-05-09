@@ -12,9 +12,12 @@ import web.service.CarServiceImpl;
 @Controller
 public class CarController {
 
+    private CarService cars;
 
     @Autowired
-    private CarServiceImpl cars;
+    public void setCars(CarServiceImpl cars) {
+        this.cars = cars;
+    }
 
     @GetMapping(value = "/cars")
     public String printCar(Model model, @RequestParam(defaultValue = "5") int count) {
