@@ -20,7 +20,7 @@ public class CarController {
     }
 
     @GetMapping(value = "/cars")
-    public String printCar(Model model, @RequestParam(defaultValue = "5") int count) {
+    public String printCar(Model model, @RequestParam(defaultValue = "3") int count) {
 
         model.addAttribute("cars", cars.getCarList(count));
         return "cars";

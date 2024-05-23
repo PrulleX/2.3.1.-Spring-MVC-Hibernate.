@@ -27,9 +27,4 @@ public class CarServiceImpl implements CarService {
             return carList.subList(0, count);
         }
     }
-
-    public void setCarList(Car car) {
-        carList.add(car);
-    }
-
 }
